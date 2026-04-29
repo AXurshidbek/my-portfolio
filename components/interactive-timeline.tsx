@@ -45,7 +45,7 @@ export default function InteractiveTimeline() {
   return (
     <div className="relative">
       {/* Timeline Line */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-400 to-purple-400 rounded-full" />
+      <div className="absolute left-6 md:left-1/2 md:transform md:-translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-400 to-purple-400 rounded-full" />
 
       <div className="space-y-12">
         {timelineData.map((item, index) => (
@@ -54,10 +54,10 @@ export default function InteractiveTimeline() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.2, duration: 0.6 }}
-            className={`flex items-center ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
+            className={`flex items-center md:${index % 2 === 0 ? "flex-row" : "flex-row-reverse"} flex-row px-2`}
           >
             {/* Content Card */}
-            <div className={`w-5/12 ${index % 2 === 0 ? "pr-8" : "pl-8"}`}>
+            <div className={`w-full md:w-5/12 ${index % 2 === 0 ? "md:pr-8" : "md:pl-8"}`}>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 onClick={() => setSelectedItem(selectedItem === item.id ? null : item.id)}
@@ -97,15 +97,23 @@ export default function InteractiveTimeline() {
             </div>
 
             {/* Timeline Node */}
-            <div className="relative z-10">
+            <div className="relative z-10 hidden md:block">
               <motion.div
                 whileHover={{ scale: 1.2 }}
                 className="w-6 h-6 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full border-4 border-black shadow-lg"
               />
             </div>
+            
+            {/* Timeline Node Mobile */}
+            <div className="absolute left-1 z-10 md:hidden">
+              <motion.div
+                whileHover={{ scale: 1.2 }}
+                className="w-5 h-5 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full border-3 border-black shadow-lg"
+              />
+            </div>
 
             {/* Spacer */}
-            <div className="w-5/12" />
+            <div className="hidden md:block md:w-5/12" />
           </motion.div>
         ))}
       </div>

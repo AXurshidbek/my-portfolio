@@ -62,7 +62,7 @@ export default function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 1 }}
-            className="text-6xl md:text-8xl font-bold mb-6 liquid-gradient font-sora"
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-4 sm:mb-6 liquid-gradient font-sora"
           >
             Xurshidbek Abdubannobov
           </motion.h1>
@@ -72,7 +72,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.8 }}
-            className="text-xl md:text-2xl text-white/80 mb-8 font-light"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/80 mb-6 sm:mb-8 font-light px-2"
           >
             Inventing tomorrow's web, one line of code at a time.
           </motion.p>
@@ -82,19 +82,19 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2, duration: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-2"
           >
             <Button
-              size="lg"
-              className="glass-morphism hover:animate-glow text-white border-cyan-400 hover:border-cyan-300 px-8 py-4 text-lg bg-transparent"
+              size="sm"
+              className="glass-morphism hover:animate-glow text-white border-cyan-400 hover:border-cyan-300 px-4 sm:px-8 py-2 sm:py-4 text-sm sm:text-lg bg-transparent w-full sm:w-auto"
               variant="outline"
               onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              <Rocket className="mr-2 h-5 w-5" />🚀 Explore My Universe
+              <Rocket className="mr-1 sm:mr-2 h-4 sm:h-5 w-4 sm:w-5" />🚀 Explore
             </Button>
             <Button
-              size="lg"
-              className="glass-morphism hover:animate-glow text-white border-purple-400 hover:border-purple-300 px-8 py-4 text-lg bg-transparent"
+              size="sm"
+              className="glass-morphism hover:animate-glow text-white border-purple-400 hover:border-purple-300 px-4 sm:px-8 py-2 sm:py-4 text-sm sm:text-lg bg-transparent w-full sm:w-auto"
               variant="outline"
               onClick={() => {
               const link = document.createElement('a')
@@ -103,7 +103,7 @@ export default function HeroSection() {
               link.click()
               }}
             >
-              <Download className="mr-2 h-5 w-5" />📄 View Resume
+              <Download className="mr-1 sm:mr-2 h-4 sm:h-5 w-4 sm:w-5" />📄 Resume
             </Button>
           </motion.div>
         </motion.div>

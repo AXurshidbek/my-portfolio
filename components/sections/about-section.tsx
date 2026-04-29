@@ -12,10 +12,10 @@ export default function AboutSection() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16 px-2"
         >
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 liquid-gradient font-sora">About Me</h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+          <h2 className="text-2xl sm:text-4xl md:text-6xl font-bold mb-4 sm:mb-6 liquid-gradient font-sora">About Me</h2>
+          <p className="text-sm sm:text-base md:text-xl text-white/80 max-w-3xl mx-auto">
             I'm a creative technologist who bridges the gap between design and development, crafting digital experiences
             that push the boundaries of what's possible on the web.
           </p>

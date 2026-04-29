@@ -13,12 +13,16 @@ export const metadata: Metadata = {
   description: "Inventing tomorrow's web, one line of code at a time.",
   keywords: ["developer", "portfolio", "full-stack", "creative technologist"],
   authors: [{ name: "Xurshidbek Abdubannobov" }],
+  icons: {
+    icon: "/LOGO.svg",
+  },
   openGraph: {
     title: "Xurshidbek Abdubannobov - Creative Technologist",
     description: "Inventing tomorrow's web, one line of code at a time.",
     type: "website",
   },
-    generator: 'senotron'
+  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
+  generator: 'senotron'
 }
 
 export default function RootLayout({

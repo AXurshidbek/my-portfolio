@@ -52,15 +52,15 @@ export default function ContactSection() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16 px-2"
         >
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 liquid-gradient font-sora">Let's Connect</h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+          <h2 className="text-2xl sm:text-4xl md:text-6xl font-bold mb-4 sm:mb-6 liquid-gradient font-sora">Let's Connect</h2>
+          <p className="text-sm sm:text-base md:text-xl text-white/80 max-w-3xl mx-auto">
             Ready to bring your ideas to life? Let's discuss how we can create something amazing together.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 max-w-6xl mx-auto px-2">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -119,10 +119,10 @@ export default function ContactSection() {
                   <Button
                     type="submit"
                     className="w-full glass-morphism border-cyan-400 text-cyan-400 hover:bg-cyan-400/20 hover:animate-glow"
-                    size="lg"
+                    size="sm"
                   >
-                    <Send className="mr-2 h-5 w-5" />
-                    Send Message
+                    <Send className="mr-1 sm:mr-2 h-4 sm:h-5 w-4 sm:w-5" />
+                    <span className="text-xs sm:text-base">Send Message</span>
                   </Button>
                 </form>
               </CardContent>

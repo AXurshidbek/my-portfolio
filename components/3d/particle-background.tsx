@@ -7,7 +7,9 @@ import type * as THREE from "three"
 
 function ParticleField() {
   const ref = useRef<THREE.Points>(null)
-  const particlesCount = 1000 // Reduced for better performance
+  // Reduce particles on mobile devices for better performance
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
+  const particlesCount = isMobile ? 400 : 1000 // Reduced for better performance
 
   // Generate random positions for particles
   const positions = new Float32Array(particlesCount * 3)

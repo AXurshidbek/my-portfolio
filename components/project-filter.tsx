@@ -18,20 +18,22 @@ interface ProjectFilterProps {
 
 export default function ProjectFilter({ selectedFilter, onFilterChange }: ProjectFilterProps) {
   return (
-    <div className="flex flex-wrap justify-center gap-4">
+    <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
       {filters.map((filter) => (
         <motion.div key={filter.id} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Button
             variant={selectedFilter === filter.id ? "default" : "outline"}
             onClick={() => onFilterChange(filter.id)}
-            className={`glass-morphism border-white/20 ${
+            size="sm"
+            className={`glass-morphism border-white/20 text-xs sm:text-sm ${
               selectedFilter === filter.id
                 ? "bg-cyan-400/20 border-cyan-400 text-cyan-400"
                 : "hover:border-cyan-400/50 text-white"
             }`}
           >
-            <span className="mr-2">{filter.icon}</span>
-            {filter.label}
+            <span className="mr-1 sm:mr-2">{filter.icon}</span>
+            <span className="hidden sm:inline">{filter.label}</span>
+            <span className="sm:hidden">{filter.id === "all" ? "All" : filter.label.split(/ +/, 1)[0]}</span>
           </Button>
         </motion.div>
       ))}

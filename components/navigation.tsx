@@ -43,8 +43,9 @@ export default function Navigation() {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <motion.div whileHover={{ scale: 1.05 }} className="text-2xl font-bold liquid-gradient font-sora">
-            Xurshidbek Abdubannobov
+          <motion.div whileHover={{ scale: 1.05 }} className="text-xl sm:text-2xl font-bold liquid-gradient font-sora truncate">
+            <span className="hidden sm:inline">Xurshidbek Abdubannobov</span>
+            <span className="sm:hidden">XA</span>
           </motion.div>
 
           {/* Desktop Navigation */}
